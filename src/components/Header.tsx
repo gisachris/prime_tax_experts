@@ -2,14 +2,18 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/lib/siteConfig";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const isActive = (path: string) => pathname === path;
 
   return (
     <nav className="fixed top-0 w-full z-50 glass-nav shadow-[0px_20px_40px_rgba(31,63,110,0.06)]">
@@ -26,7 +30,7 @@ export function Header() {
         </button>
 
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <img
             alt="Prime Tax Experts Logo"
             className="h-8 w-auto"
@@ -35,22 +39,50 @@ export function Header() {
           <span className="hidden lg:block text-xl font-bold text-[#1F3F6E] tracking-tighter font-headline">
             {siteConfig.name}
           </span>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <a className="text-[#F58220] font-bold border-b-2 border-[#F58220] pb-1 font-['Inter'] text-sm tracking-tight transition-all duration-200" href="#home">
+          <Link
+            className={`font-['Inter'] text-sm tracking-tight transition-all duration-200 ${
+              isActive('/')
+                ? 'text-[#F58220] font-bold border-b-2 border-[#F58220] pb-1'
+                : 'text-[#1F3F6E] hover:text-[#2E5C9A]'
+            }`}
+            href="/"
+          >
             Home
-          </a>
-          <a className="hover:text-[#2E5C9A] transition-colors font-['Inter'] font-medium text-sm tracking-tight text-[#1F3F6E]" href="#services">
-            Services
-          </a>
-          <a className="hover:text-[#2E5C9A] transition-colors font-['Inter'] font-medium text-sm tracking-tight text-[#1F3F6E]" href="#about">
+          </Link>
+          <Link
+            className={`font-['Inter'] text-sm tracking-tight transition-all duration-200 ${
+              isActive('/about')
+                ? 'text-[#F58220] font-bold border-b-2 border-[#F58220] pb-1'
+                : 'text-[#1F3F6E] hover:text-[#2E5C9A]'
+            }`}
+            href="/about"
+          >
             About
-          </a>
-          <a className="hover:text-[#2E5C9A] transition-colors font-['Inter'] font-medium text-sm tracking-tight text-[#1F3F6E]" href="#contact">
+          </Link>
+          <Link
+            className={`font-['Inter'] text-sm tracking-tight transition-all duration-200 ${
+              isActive('/services')
+                ? 'text-[#F58220] font-bold border-b-2 border-[#F58220] pb-1'
+                : 'text-[#1F3F6E] hover:text-[#2E5C9A]'
+            }`}
+            href="/services"
+          >
+            Services
+          </Link>
+          <Link
+            className={`font-['Inter'] text-sm tracking-tight transition-all duration-200 ${
+              isActive('/contact')
+                ? 'text-[#F58220] font-bold border-b-2 border-[#F58220] pb-1'
+                : 'text-[#1F3F6E] hover:text-[#2E5C9A]'
+            }`}
+            href="/contact"
+          >
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* Call Now Button */}
@@ -63,34 +95,50 @@ export function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200">
           <div className="px-8 py-6 space-y-4">
-            <a
-              className="block text-[#F58220] font-bold border-b-2 border-[#F58220] pb-1 font-['Inter'] text-base tracking-tight transition-all duration-200"
-              href="#home"
+            <Link
+              className={`block font-['Inter'] text-base tracking-tight transition-all duration-200 ${
+                isActive('/')
+                  ? 'text-[#F58220] font-bold border-b-2 border-[#F58220] pb-1'
+                  : 'text-[#1F3F6E] hover:text-[#2E5C9A]'
+              } py-2`}
+              href="/"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
-            </a>
-            <a
-              className="block hover:text-[#2E5C9A] transition-colors font-['Inter'] font-medium text-base tracking-tight text-[#1F3F6E] py-2"
-              href="#services"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Services
-            </a>
-            <a
-              className="block hover:text-[#2E5C9A] transition-colors font-['Inter'] font-medium text-base tracking-tight text-[#1F3F6E] py-2"
-              href="#about"
+            </Link>
+            <Link
+              className={`block font-['Inter'] text-base tracking-tight transition-all duration-200 ${
+                isActive('/about')
+                  ? 'text-[#F58220] font-bold border-b-2 border-[#F58220] pb-1'
+                  : 'text-[#1F3F6E] hover:text-[#2E5C9A]'
+              } py-2`}
+              href="/about"
               onClick={() => setIsMenuOpen(false)}
             >
               About
-            </a>
-            <a
-              className="block hover:text-[#2E5C9A] transition-colors font-['Inter'] font-medium text-base tracking-tight text-[#1F3F6E] py-2"
-              href="#contact"
+            </Link>
+            <Link
+              className={`block font-['Inter'] text-base tracking-tight transition-all duration-200 ${
+                isActive('/services')
+                  ? 'text-[#F58220] font-bold border-b-2 border-[#F58220] pb-1'
+                  : 'text-[#1F3F6E] hover:text-[#2E5C9A]'
+              } py-2`}
+              href="/services"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Services
+            </Link>
+            <Link
+              className={`block font-['Inter'] text-base tracking-tight transition-all duration-200 ${
+                isActive('/contact')
+                  ? 'text-[#F58220] font-bold border-b-2 border-[#F58220] pb-1'
+                  : 'text-[#1F3F6E] hover:text-[#2E5C9A]'
+              } py-2`}
+              href="/contact"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       )}
