@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Menu, X, Phone } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
 
 export function Header() {
@@ -24,9 +25,11 @@ export function Header() {
           className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
           aria-label="Toggle menu"
         >
-          <span className="material-symbols-outlined text-[#1F3F6E] text-2xl">
-            {isMenuOpen ? 'close' : 'menu'}
-          </span>
+          {isMenuOpen ? (
+            <X className="w-6 h-6 text-[#1F3F6E]" />
+          ) : (
+            <Menu className="w-6 h-6 text-[#1F3F6E]" />
+          )}
         </button>
 
         {/* Logo */}
@@ -86,7 +89,8 @@ export function Header() {
         </div>
 
         {/* Call Now Button */}
-        <button className="bg-[#F58220] text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-tight scale-95 active:opacity-80 transition-all hover:bg-[#d9731b]">
+        <button className="bg-[#F58220] text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-tight scale-95 active:opacity-80 transition-all hover:bg-[#d9731b] inline-flex items-center gap-2">
+          <Phone className="w-4 h-4" />
           Call Now
         </button>
       </div>

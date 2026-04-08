@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ChevronRight, ArrowRight, User, BarChart3, Building2, Scale, ChevronDown } from "lucide-react";
 
 export default function ServicesPage() {
   return (
@@ -27,7 +28,7 @@ export default function ServicesPage() {
                   <ol className="flex items-center space-x-2">
                     <li><a className="hover:text-[#F58220] transition-colors" href="/">Home</a></li>
                     <li className="flex items-center space-x-2">
-                      <span className="material-symbols-outlined text-sm">chevron_right</span>
+                      <ChevronRight className="w-4 h-4" />
                       <span className="text-[#F58220]">Services</span>
                     </li>
                   </ol>
@@ -49,7 +50,7 @@ export default function ServicesPage() {
               {/* Individual Tax Prep */}
               <div className="bg-surface-container-lowest p-8 flex flex-col group hover:shadow-[0px_20px_40px_rgba(31,63,110,0.06)] transition-all duration-300">
                 <div className="mb-8">
-                  <span className="material-symbols-outlined text-4xl text-[#F58220]">person</span>
+                  <User className="w-12 h-12 text-[#F58220]" />
                 </div>
                 <h3 className="text-xl font-bold text-tertiary mb-4 tracking-tight">Individual Tax Prep</h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed mb-8 flex-grow">
@@ -57,14 +58,14 @@ export default function ServicesPage() {
                 </p>
                 <a className="inline-flex items-center text-sm font-bold text-tertiary group-hover:text-[#F58220] transition-colors" href="/services/individual-tax">
                   Learn More
-                  <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
 
               {/* Business Tax Consulting */}
               <div className="bg-surface-container-lowest p-8 flex flex-col group hover:shadow-[0px_20px_40px_rgba(31,63,110,0.06)] transition-all duration-300">
                 <div className="mb-8">
-                  <span className="material-symbols-outlined text-4xl text-[#F58220]">query_stats</span>
+                  <BarChart3 className="w-12 h-12 text-[#F58220]" />
                 </div>
                 <h3 className="text-xl font-bold text-tertiary mb-4 tracking-tight">Business Tax Consulting</h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed mb-8 flex-grow">
@@ -72,14 +73,14 @@ export default function ServicesPage() {
                 </p>
                 <a className="inline-flex items-center text-sm font-bold text-tertiary group-hover:text-[#F58220] transition-colors" href="/services/business-consulting">
                   Learn More
-                  <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
 
               {/* Corporate Tax Services */}
               <div className="bg-surface-container-lowest p-8 flex flex-col group hover:shadow-[0px_20px_40px_rgba(31,63,110,0.06)] transition-all duration-300">
                 <div className="mb-8">
-                  <span className="material-symbols-outlined text-4xl text-[#F58220]">domain</span>
+                  <Building2 className="w-12 h-12 text-[#F58220]" />
                 </div>
                 <h3 className="text-xl font-bold text-tertiary mb-4 tracking-tight">Corporate Tax Services</h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed mb-8 flex-grow">
@@ -87,14 +88,14 @@ export default function ServicesPage() {
                 </p>
                 <a className="inline-flex items-center text-sm font-bold text-tertiary group-hover:text-[#F58220] transition-colors" href="/services/corporate-tax">
                   Learn More
-                  <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
 
               {/* Estate & Trust Planning */}
               <div className="bg-surface-container-lowest p-8 flex flex-col group hover:shadow-[0px_20px_40px_rgba(31,63,110,0.06)] transition-all duration-300">
                 <div className="mb-8">
-                  <span className="material-symbols-outlined text-4xl text-[#F58220]">account_balance</span>
+                  <Scale className="w-12 h-12 text-[#F58220]" />
                 </div>
                 <h3 className="text-xl font-bold text-tertiary mb-4 tracking-tight">Estate & Trust Planning</h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed mb-8 flex-grow">
@@ -102,7 +103,7 @@ export default function ServicesPage() {
                 </p>
                 <a className="inline-flex items-center text-sm font-bold text-tertiary group-hover:text-[#F58220] transition-colors" href="/services/estate-planning">
                   Learn More
-                  <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
             </div>
@@ -154,7 +155,7 @@ export default function ServicesPage() {
               <details className="group bg-surface-container-lowest transition-all duration-300" open>
                 <summary className="flex justify-between items-center p-6 cursor-pointer list-none">
                   <span className="font-bold text-tertiary">What documents are required for my first consultation?</span>
-                  <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                  <ChevronDown className="w-5 h-5 transition-transform group-open:rotate-180" />
                 </summary>
                 <div className="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">
                   Please provide your previous year's tax return, current income statements (W2, 1099), and any relevant investment or real estate documentation to ensure a comprehensive initial assessment.
@@ -163,7 +164,7 @@ export default function ServicesPage() {
               <details className="group bg-surface-container-lowest transition-all duration-300">
                 <summary className="flex justify-between items-center p-6 cursor-pointer list-none">
                   <span className="font-bold text-tertiary">How can I minimize my corporate tax liability?</span>
-                  <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                  <ChevronDown className="w-5 h-5 transition-transform group-open:rotate-180" />
                 </summary>
                 <div className="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">
                   Minimization is achieved through proactive planning, leveraging R&D credits, optimizing business structure, and ensuring all eligible deductions are meticulously accounted for.
@@ -172,7 +173,7 @@ export default function ServicesPage() {
               <details className="group bg-surface-container-lowest transition-all duration-300">
                 <summary className="flex justify-between items-center p-6 cursor-pointer list-none">
                   <span className="font-bold text-tertiary">Do you handle international tax compliance?</span>
-                  <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                  <ChevronDown className="w-5 h-5 transition-transform group-open:rotate-180" />
                 </summary>
                 <div className="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">
                   Yes, our specialized international division manages cross-border taxation, FBAR compliance, and treaty-based tax positioning for both individuals and businesses.
@@ -181,7 +182,7 @@ export default function ServicesPage() {
               <details className="group bg-surface-container-lowest transition-all duration-300">
                 <summary className="flex justify-between items-center p-6 cursor-pointer list-none">
                   <span className="font-bold text-tertiary">What is the timeline for estate tax planning?</span>
-                  <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                  <ChevronDown className="w-5 h-5 transition-transform group-open:rotate-180" />
                 </summary>
                 <div className="px-6 pb-6 text-sm text-on-surface-variant leading-relaxed">
                   Estate planning is an ongoing process, but an initial strategy can typically be drafted within 2-4 weeks following a thorough discovery phase of your assets and goals.

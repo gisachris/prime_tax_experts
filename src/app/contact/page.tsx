@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MapPin, Phone, Mail, Clock, Share2, Globe, Link, ArrowRight } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -38,7 +39,7 @@ export default function ContactPage() {
                 {/* Office Address */}
                 <div className="flex gap-6 group">
                   <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-[#1F3F6E]">
-                    <span className="material-symbols-outlined">location_on</span>
+                    <MapPin className="w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="text-sm font-bold tracking-wider text-slate-400 uppercase mb-2">Office Address</h3>
@@ -52,7 +53,7 @@ export default function ContactPage() {
                 {/* Phone Number */}
                 <div className="flex gap-6 group">
                   <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-[#1F3F6E]">
-                    <span className="material-symbols-outlined">call</span>
+                    <Phone className="w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="text-sm font-bold tracking-wider text-slate-400 uppercase mb-2">Phone Number</h3>
@@ -63,7 +64,7 @@ export default function ContactPage() {
                 {/* Email Address */}
                 <div className="flex gap-6 group">
                   <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-[#1F3F6E]">
-                    <span className="material-symbols-outlined">mail</span>
+                    <Mail className="w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="text-sm font-bold tracking-wider text-slate-400 uppercase mb-2">Email Address</h3>
@@ -74,7 +75,7 @@ export default function ContactPage() {
                 {/* Office Hours */}
                 <div className="flex gap-6 group">
                   <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-[#1F3F6E]">
-                    <span className="material-symbols-outlined">schedule</span>
+                    <Clock className="w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="text-sm font-bold tracking-wider text-slate-400 uppercase mb-2">Office Hours</h3>
@@ -87,13 +88,13 @@ export default function ContactPage() {
                 <h3 className="text-sm font-bold tracking-wider text-slate-400 uppercase mb-6">Follow Our Insights</h3>
                 <div className="flex gap-4">
                   <a className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-[#1F3F6E] hover:bg-[#1F3F6E] hover:text-white transition-all duration-300" href="#">
-                    <span className="material-symbols-outlined" style={{fontSize: '20px'}}>share</span>
+                    <Share2 className="w-5 h-5" />
                   </a>
                   <a className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-[#1F3F6E] hover:bg-[#1F3F6E] hover:text-white transition-all duration-300" href="#">
-                    <span className="material-symbols-outlined" style={{fontSize: '20px'}}>public</span>
+                    <Globe className="w-5 h-5" />
                   </a>
                   <a className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-[#1F3F6E] hover:bg-[#1F3F6E] hover:text-white transition-all duration-300" href="#">
-                    <span className="material-symbols-outlined" style={{fontSize: '20px'}}>linked_services</span>
+                    <Link className="w-5 h-5" />
                   </a>
                 </div>
               </div>
@@ -106,7 +107,7 @@ export default function ContactPage() {
                 ></div>
                 <div className="absolute inset-0 bg-[#1F3F6E]/10 flex items-center justify-center">
                   <div className="bg-white p-3 rounded-full shadow-[0px_20px_40px_rgba(31,63,110,0.06)]">
-                    <span className="material-symbols-outlined text-[#F58220]" style={{fontVariationSettings: "'FILL' 1"}}>location_on</span>
+                    <MapPin className="w-6 h-6 text-[#F58220]" />
                   </div>
                 </div>
               </div>
@@ -162,11 +163,11 @@ export default function ContactPage() {
                 </div>
                 <div className="pt-4">
                   <button
-                    className="w-full md:w-auto bg-[#F58220] text-white px-10 py-4 rounded-lg font-bold tracking-tight hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-3"
+                    className="w-full md:w-auto bg-[#F58220] text-white px-10 py-4 rounded-lg font-bold tracking-tight hover:brightness-110 active:scale-[0.98] transition-all inline-flex items-center justify-center gap-3"
                     type="submit"
                   >
                     Send Message
-                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                    <ArrowRight className="w-4 h-4" />
                   </button>
                   <p className="mt-6 text-[0.75rem] text-slate-400 leading-relaxed italic">
                     By clicking send, you agree to our <a className="underline" href="#">Privacy Policy</a> and understand how we protect your financial data.

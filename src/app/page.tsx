@@ -1,5 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { ArrowRight, BadgeCheck, User, Building2, Scale, TrendingUp, CheckCircle, Play } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-4 pt-4">
               <button className="bg-[#F58220] text-white px-8 py-4 rounded-lg font-bold text-base hover:bg-[#d9731b] transition-all flex items-center gap-2">
                 Get Started
-                <span className="material-symbols-outlined text-lg">arrow_forward</span>
+                <ArrowRight className="w-5 h-5" />
               </button>
               <button className="border-2 border-[#1F3F6E] text-[#1F3F6E] px-8 py-4 rounded-lg font-bold text-base hover:bg-surface-container-low transition-all">
                 View Services
@@ -72,9 +73,7 @@ export default function Home() {
           </div>
           <div className="h-8 w-px bg-outline-variant hidden lg:block opacity-30"></div>
           <div className="flex items-center gap-4">
-            <span className="material-symbols-outlined text-[#F58220] text-4xl" data-weight="fill">
-              verified_user
-            </span>
+            <BadgeCheck className="w-10 h-10 text-[#F58220]" />
             <span className="text-sm font-semibold text-secondary leading-tight uppercase tracking-wider">
               IRS Registered<br />Practitioners
             </span>
@@ -99,9 +98,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Service Card 1 */}
             <div className="p-8 bg-surface-container-low rounded-lg group hover:bg-[#1F3F6E] transition-all duration-500 hover:-translate-y-2">
-              <span className="material-symbols-outlined text-4xl text-[#F58220] mb-6 group-hover:text-white transition-colors" data-weight="fill">
-                person
-              </span>
+              <User className="w-12 h-12 text-[#F58220] mb-6 group-hover:text-white transition-colors" />
               <h4 className="text-xl font-bold text-[#1F3F6E] mb-4 group-hover:text-white transition-colors">
                 Individual Tax
               </h4>
@@ -111,9 +108,7 @@ export default function Home() {
             </div>
             {/* Service Card 2 */}
             <div className="p-8 bg-surface-container-low rounded-lg group hover:bg-[#1F3F6E] transition-all duration-500 hover:-translate-y-2">
-              <span className="material-symbols-outlined text-4xl text-[#F58220] mb-6 group-hover:text-white transition-colors" data-weight="fill">
-                domain
-              </span>
+              <Building2 className="w-12 h-12 text-[#F58220] mb-6 group-hover:text-white transition-colors" />
               <h4 className="text-xl font-bold text-[#1F3F6E] mb-4 group-hover:text-white transition-colors">
                 Business Tax
               </h4>
@@ -123,9 +118,7 @@ export default function Home() {
             </div>
             {/* Service Card 3 */}
             <div className="p-8 bg-surface-container-low rounded-lg group hover:bg-[#1F3F6E] transition-all duration-500 hover:-translate-y-2">
-              <span className="material-symbols-outlined text-4xl text-[#F58220] mb-6 group-hover:text-white transition-colors" data-weight="fill">
-                account_balance
-              </span>
+              <Scale className="w-12 h-12 text-[#F58220] mb-6 group-hover:text-white transition-colors" />
               <h4 className="text-xl font-bold text-[#1F3F6E] mb-4 group-hover:text-white transition-colors">
                 Corporate Audit
               </h4>
@@ -135,9 +128,7 @@ export default function Home() {
             </div>
             {/* Service Card 4 */}
             <div className="p-8 bg-surface-container-low rounded-lg group hover:bg-[#1F3F6E] transition-all duration-500 hover:-translate-y-2">
-              <span className="material-symbols-outlined text-4xl text-[#F58220] mb-6 group-hover:text-white transition-colors" data-weight="fill">
-                monitoring
-              </span>
+              <TrendingUp className="w-12 h-12 text-[#F58220] mb-6 group-hover:text-white transition-colors" />
               <h4 className="text-xl font-bold text-[#1F3F6E] mb-4 group-hover:text-white transition-colors">
                 Financial Planning
               </h4>
@@ -162,9 +153,7 @@ export default function Home() {
             </div>
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-20 h-20 bg-[#F58220] rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined text-white text-4xl" data-weight="fill">
-                  play_arrow
-                </span>
+                <Play className="w-8 h-8 text-white fill-current" />
               </div>
             </div>
           </div>
@@ -174,7 +163,7 @@ export default function Home() {
             </h3>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <span className="material-symbols-outlined text-[#F58220] mt-1">check_circle</span>
+                <CheckCircle className="w-5 h-5 text-[#F58220] mt-1 flex-shrink-0" />
                 <div>
                   <h5 className="font-bold text-[#1F3F6E]">Uncompromising Accuracy</h5>
                   <p className="text-sm text-on-surface-variant leading-relaxed">
@@ -183,7 +172,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="material-symbols-outlined text-[#F58220] mt-1">check_circle</span>
+                <CheckCircle className="w-5 h-5 text-[#F58220] mt-1 flex-shrink-0" />
                 <div>
                   <h5 className="font-bold text-[#1F3F6E]">Client-First Mentality</h5>
                   <p className="text-sm text-on-surface-variant leading-relaxed">
@@ -192,7 +181,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="material-symbols-outlined text-[#F58220] mt-1">check_circle</span>
+                <CheckCircle className="w-5 h-5 text-[#F58220] mt-1 flex-shrink-0" />
                 <div>
                   <h5 className="font-bold text-[#1F3F6E]">Proactive Tax Planning</h5>
                   <p className="text-sm text-on-surface-variant leading-relaxed">
@@ -201,7 +190,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="material-symbols-outlined text-[#F58220] mt-1">check_circle</span>
+                <CheckCircle className="w-5 h-5 text-[#F58220] mt-1 flex-shrink-0" />
                 <div>
                   <h5 className="font-bold text-[#F58220]">Data-Driven Insights</h5>
                   <p className="text-sm text-on-surface-variant leading-relaxed">

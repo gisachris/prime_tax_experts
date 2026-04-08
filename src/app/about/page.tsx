@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Shield, Zap, Building, FileCheck, Award, Crown } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -158,19 +159,19 @@ export default function AboutPage() {
             </div>
             <div className="flex flex-wrap justify-center items-center gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-3xl">account_balance</span>
+                <Building className="w-8 h-8 text-[#1F3F6E]" />
                 <span className="font-bold">Federal Tax Authority</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-3xl">policy</span>
+                <FileCheck className="w-8 h-8 text-[#1F3F6E]" />
                 <span className="font-bold">National CPA Association</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-3xl">verified_user</span>
+                <Award className="w-8 h-8 text-[#1F3F6E]" />
                 <span className="font-bold">Certified Tax Resolution</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-3xl">workspace_premium</span>
+                <Crown className="w-8 h-8 text-[#1F3F6E]" />
                 <span className="font-bold">Finance Standards Board</span>
               </div>
             </div>
