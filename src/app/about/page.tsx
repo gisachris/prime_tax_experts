@@ -44,17 +44,17 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="p-8 bg-surface-container-low rounded-xl space-y-4">
-                  <span className="material-symbols-outlined text-[#F58220] text-4xl">verified</span>
+                <div className="p-8 bg-surface-container-low rounded-xl space-y-4 h-full overflow-hidden">
+                  <Shield className="w-8 h-8 text-[#F58220]" />
                   <h3 className="text-xl font-bold text-[#1F3F6E]">Unyielding Integrity</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed">
+                  <p className="text-sm text-slate-500 leading-relaxed break-words">
                     We maintain the highest ethical standards in every transaction, ensuring your peace of mind.
                   </p>
                 </div>
-                <div className="p-8 bg-surface-container-highest rounded-xl space-y-4 mt-8 md:mt-12">
-                  <span className="material-symbols-outlined text-[#F58220] text-4xl">precision_manufacturing</span>
+                <div className="p-8 bg-surface-container-highest rounded-xl space-y-4 h-full overflow-hidden">
+                  <Zap className="w-8 h-8 text-[#F58220]" />
                   <h3 className="text-xl font-bold text-[#1F3F6E]">Absolute Precision</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed">
+                  <p className="text-sm text-slate-500 leading-relaxed break-words">
                     In a world of variables, our calculations are the constant you can rely on for compliance.
                   </p>
                 </div>

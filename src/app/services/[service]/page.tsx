@@ -241,10 +241,10 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ servic
               <h3 className="text-xl font-headline font-bold text-[#1F3F6E] mb-8">Strategic Pillars</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {serviceData.pillars.map((pillar, index) => (
-                  <div key={index} className="space-y-4">
+                  <div key={index} className="space-y-4 overflow-hidden">
                     <span className="material-symbols-outlined text-[#F58220] text-3xl">{pillar.icon}</span>
-                    <h4 className="font-headline font-bold text-lg">{pillar.title}</h4>
-                    <p className="text-sm text-on-surface-variant leading-snug">{pillar.description}</p>
+                    <h4 className="font-headline font-bold text-lg break-words">{pillar.title}</h4>
+                    <p className="text-sm text-on-surface-variant leading-relaxed break-words">{pillar.description}</p>
                   </div>
                 ))}
               </div>

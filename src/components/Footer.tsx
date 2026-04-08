@@ -25,10 +25,10 @@ export function Footer() {
         <div className="space-y-6">
           <h4 className="text-sm font-bold uppercase tracking-widest text-[#F58220]">Quick Links</h4>
           <ul className="space-y-3 font-['Inter'] text-sm">
-            <li><a className="text-slate-300 hover:text-white hover:translate-x-1 transition-transform inline-block" href="#">Tax Preparation</a></li>
-            <li><a className="text-slate-300 hover:text-white hover:translate-x-1 transition-transform inline-block" href="#">Corporate Planning</a></li>
-            <li><a className="text-slate-300 hover:text-white hover:translate-x-1 transition-transform inline-block" href="#">Estate Planning</a></li>
-            <li><a className="text-slate-300 hover:text-white hover:translate-x-1 transition-transform inline-block" href="#">Audit Support</a></li>
+            <li><a className="text-slate-300 hover:text-white hover:translate-x-1 transition-transform inline-block" href="/services/individual-tax">Tax Preparation</a></li>
+            <li><a className="text-slate-300 hover:text-white hover:translate-x-1 transition-transform inline-block" href="/services/business-consulting">Corporate Planning</a></li>
+            <li><a className="text-slate-300 hover:text-white hover:translate-x-1 transition-transform inline-block" href="/services/estate-planning">Estate Planning</a></li>
+            <li><a className="text-slate-300 hover:text-white hover:translate-x-1 transition-transform inline-block" href="/services/corporate-tax">Audit Support</a></li>
           </ul>
         </div>
         <div className="space-y-6">
@@ -40,7 +40,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-2 text-sm text-slate-300">
             <MapPin className="w-4 h-4" />
-            <a className="underline underline-offset-4 decoration-[#F58220]/50 hover:text-white" href="#">View on Map</a>
+            <a className="underline underline-offset-4 decoration-[#F58220]/50 hover:text-white" href="https://maps.google.com" target="_blank" rel="noopener noreferrer">View on Map</a>
           </div>
         </div>
         <div className="space-y-6">

@@ -17,8 +17,8 @@ export function Header() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass-nav shadow-[0px_20px_40px_rgba(31,63,110,0.06)]">
-      <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+    <nav className="fixed top-0 w-full z-50 bg-white shadow-[0px_20px_40px_rgba(31,63,110,0.06)]">
+      <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full">
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
@@ -97,7 +97,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200">
+        <div className="md:hidden bg-white border-t border-slate-200">
           <div className="px-8 py-6 space-y-4">
             <Link
               className={`block font-['Inter'] text-base tracking-tight transition-all duration-200 ${

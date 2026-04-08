@@ -87,13 +87,13 @@ export default function ContactPage() {
               <div className="pt-8 border-t border-slate-100">
                 <h3 className="text-sm font-bold tracking-wider text-slate-400 uppercase mb-6">Follow Our Insights</h3>
                 <div className="flex gap-4">
-                  <a className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-[#1F3F6E] hover:bg-[#1F3F6E] hover:text-white transition-all duration-300" href="#">
+                  <a className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-[#1F3F6E] hover:bg-[#1F3F6E] hover:text-white transition-all duration-300" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                     <Share2 className="w-5 h-5" />
                   </a>
-                  <a className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-[#1F3F6E] hover:bg-[#1F3F6E] hover:text-white transition-all duration-300" href="#">
+                  <a className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-[#1F3F6E] hover:bg-[#1F3F6E] hover:text-white transition-all duration-300" href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                     <Globe className="w-5 h-5" />
                   </a>
-                  <a className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-[#1F3F6E] hover:bg-[#1F3F6E] hover:text-white transition-all duration-300" href="#">
+                  <a className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-[#1F3F6E] hover:bg-[#1F3F6E] hover:text-white transition-all duration-300" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                     <Link className="w-5 h-5" />
                   </a>
                 </div>
@@ -170,7 +170,7 @@ export default function ContactPage() {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <p className="mt-6 text-[0.75rem] text-slate-400 leading-relaxed italic">
-                    By clicking send, you agree to our <a className="underline" href="#">Privacy Policy</a> and understand how we protect your financial data.
+                    By clicking send, you agree to our <a className="underline" href="/privacy">Privacy Policy</a> and understand how we protect your financial data.
                   </p>
                 </div>
               </form>
