@@ -18,11 +18,12 @@ export function Header() {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-white shadow-[0px_20px_40px_rgba(31,63,110,0.06)]">
-      <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full">
+      {/* Mobile Header */}
+      <div className="md:hidden flex justify-between items-center px-8 py-4">
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
+          className="p-2 rounded-lg hover:bg-white/10 transition-colors"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? (
@@ -32,6 +33,18 @@ export function Header() {
           )}
         </button>
 
+        {/* Mobile Logo - Clickable to Contact */}
+        <Link href="/contact" className="flex items-center gap-2">
+          <img
+            alt="Prime Tax Experts Logo"
+            className="h-8 w-auto"
+            src="https://lh3.googleusercontent.com/aida/ADBb0ujQ6PKbpbb0Alot11BJU958XY_o7Zdr7rTVLYW_EyLcmlggY5u3-bRXbsssAywxP_Nsj8VHuSzt2u9KXWmKdT-4gkPvK3bdROAcJF0CkF7hnxp_jHtisY9io2_GB57nHT7DJbLOL9NVbKcI1adgQ2ENqc7J-yAK8iOd8vOkfnGf4Rk6dsij194WXU2Kj3EkIBg1aszSQqReQDYShXvOtMIt9woeMkZFyO5fPDLCkfUa4FZ-1wUvfyAuporNHulHjc-W3FR5ABIxEQ"
+          />
+        </Link>
+      </div>
+
+      {/* Desktop Header */}
+      <div className="hidden md:flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <img
@@ -45,7 +58,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="flex items-center space-x-8">
           <Link
             className={`font-['Inter'] text-sm tracking-tight transition-all duration-200 ${
               isActive('/')
