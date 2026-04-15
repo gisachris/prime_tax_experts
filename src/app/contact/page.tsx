@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { siteConfig } from "@/lib/siteConfig";
 import { MapPin, Phone, Mail, Clock, Share2, Globe, Link, ArrowRight } from "lucide-react";
 
 export default function ContactPage() {
@@ -44,8 +45,12 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-sm font-bold tracking-wider text-slate-400 uppercase mb-2">Office Address</h3>
                     <p className="text-lg text-[#1F3F6E] font-medium leading-snug">
-                      Level 4, 123 Financial District<br />
-                      Sydney, NSW 2000, Australia
+                      {siteConfig.address.split('\n').map((line, index) => (
+                        <span key={index}>
+                          {line}
+                          {index < siteConfig.address.split('\n').length - 1 && <br />}
+                        </span>
+                      ))}
                     </p>
                   </div>
                 </div>
@@ -57,7 +62,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold tracking-wider text-slate-400 uppercase mb-2">Phone Number</h3>
-                    <p className="text-lg text-[#1F3F6E] font-medium">+61 (02) 8888 9999</p>
+                    <p className="text-lg text-[#1F3F6E] font-medium">{siteConfig.phone}</p>
                   </div>
                 </div>
 
@@ -68,7 +73,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold tracking-wider text-slate-400 uppercase mb-2">Email Address</h3>
-                    <p className="text-lg text-[#1F3F6E] font-medium">consult@primetax.com.au</p>
+                    <p className="text-lg text-[#1F3F6E] font-medium">{siteConfig.email}</p>
                   </div>
                 </div>
 
@@ -79,7 +84,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-bold tracking-wider text-slate-400 uppercase mb-2">Office Hours</h3>
-                    <p className="text-lg text-[#1F3F6E] font-medium">Monday-Friday 9am-6pm</p>
+                    <p className="text-lg text-[#1F3F6E] font-medium">{siteConfig.hours.week}</p>
+                    <p className="text-lg text-[#1F3F6E] font-medium">{siteConfig.hours.weekend}</p>
                   </div>
                 </div>
               </section>
