@@ -1,8 +1,8 @@
 "use client";
-
+import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ChevronRight, ArrowRight, User, BarChart3, Building2, Scale, ChevronDown } from "lucide-react";
+import { ChevronRight, ArrowRight, User, BarChart3, Building2, Scale, FileText, ChevronDown } from "lucide-react";
 
 export default function ServicesPage() {
   return (
@@ -87,6 +87,21 @@ export default function ServicesPage() {
                   Enterprise-level compliance and multi-jurisdictional tax planning. Specialized solutions for large-scale operations and complex filings.
                 </p>
                 <a className="inline-flex items-center text-sm font-bold text-tertiary group-hover:text-[#F58220] transition-colors" href="/services/corporate-tax">
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+              </div>
+
+              {/* Immigration Documents */}
+              <div className="bg-surface-container-lowest p-8 flex flex-col group hover:shadow-[0px_20px_40px_rgba(31,63,110,0.06)] transition-all duration-300">
+                <div className="mb-8">
+                  <FileText className="w-12 h-12 text-[#F58220]" />
+                </div>
+                <h3 className="text-xl font-bold text-tertiary mb-4 tracking-tight">Immigration Documents</h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed mb-8 flex-grow">
+                  Professional assistance with immigration paperwork, visas, and supporting documentation to keep your applications moving forward.
+                </p>
+                <a className="inline-flex items-center text-sm font-bold text-tertiary group-hover:text-[#F58220] transition-colors" href="/services/immigration-documents">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
@@ -199,9 +214,9 @@ export default function ServicesPage() {
           </div>
           <div className="max-w-5xl mx-auto px-8 relative z-10 text-center">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 tracking-tight">Let's discuss your specific needs.</h2>
-            <button className="bg-[#F58220] text-white px-12 py-4 text-lg font-bold tracking-widest uppercase hover:opacity-90 transition-all shadow-xl">
+            <Link href="/contact" className="bg-[#F58220] text-white px-12 py-4 text-lg font-bold tracking-widest uppercase hover:opacity-90 transition-all shadow-xl inline-flex items-center justify-center">
               Call Now
-            </button>
+            </Link>
           </div>
         </section>
       </main>

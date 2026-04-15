@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Shield, Zap, Building, FileCheck, Award, Crown } from "lucide-react";
@@ -87,66 +88,45 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Meet the Team */}
+        {/* Our Mission */}
         <section className="py-32 bg-white">
           <div className="max-w-7xl mx-auto px-8">
-            <div className="flex justify-between items-end mb-20">
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-16">
               <div className="space-y-4">
-                <span className="label-md uppercase tracking-[0.2em] text-[#F58220] font-bold font-label">The Architects</span>
-                <h2 className="text-5xl font-headline font-bold text-[#1F3F6E]">Meet the Team</h2>
+                <span className="label-md uppercase tracking-[0.2em] text-[#F58220] font-bold font-label">Our Mission</span>
+                <h2 className="text-5xl font-headline font-bold text-[#1F3F6E]">Simplifying tax, empowering your future</h2>
               </div>
-              <p className="hidden md:block max-w-sm text-slate-500 text-sm">
-                Our experts bring decades of collective experience from top-tier global accounting firms.
+              <p className="hidden lg:block max-w-sm text-slate-500 text-sm">
+                We provide straightforward, proactive tax services that help clients resolve issues, file accurately, and plan with confidence.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Team Member 1 */}
-              <div className="group">
-                <div className="relative overflow-hidden aspect-[4/5] bg-surface-container mb-6 rounded-lg">
-                  <img
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                    alt="Professional portrait of a male lead CPA in a sharp business suit with a confident expression"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuASRo-guVk4IckbJT0EBoNM9TmYt9tyc5_eKJf13cLXR1MKHBDktBfG7jwJ7ti6tWdzIIFETc26mVhsux6tCUJxliEBfEZWRKOm-XUwNdZ-NoH7IQLH6ad4QaCWAegD5q_0r2tTlu51fSi99jqUIy4WSE5QBXGROY9wknWFE-s1a809-P9wW25i-jo7zp-i2t2GDNA_rLuLhi_5I_spDrl73Uo3TQhLB7mukjAtlqUdWF6aA7tPfAZfiOLhUZ9ZZFjQ-YbFX50Q9Mw"
-                  />
-                </div>
-                <h4 className="text-2xl font-bold text-[#1F3F6E]">Jonathan Vane</h4>
-                <p className="text-[#F58220] font-medium mb-4">Lead CPA & Founder</p>
-                <div className="flex gap-4">
-                  <span className="material-symbols-outlined text-slate-400 cursor-pointer hover:text-[#1F3F6E]">share</span>
-                </div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="p-8 bg-surface-container-low rounded-3xl space-y-4">
+                <Shield className="w-8 h-8 text-[#F58220]" />
+                <h3 className="text-xl font-bold text-[#1F3F6E]">Clear guidance</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  We cut through complexity and deliver tax solutions that clients understand and trust.
+                </p>
               </div>
-
-              {/* Team Member 2 */}
-              <div className="group md:mt-12">
-                <div className="relative overflow-hidden aspect-[4/5] bg-surface-container mb-6 rounded-lg">
-                  <img
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                    alt="Professional portrait of a female senior tax consultant in executive attire in a modern office background"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6p5SXeFbxxKY4tcfslfRex8y1a8KP62JoXqcjEwcnElzEP-e81RXSWUjigt88_t8Qdf0kV2f2fAZfNqYzE_M8B8pWFz3bdoYF9uT6jMdeWw7E1kQs0WDS8E0OHVou5IuGHDU3fjwohdHfv3cE05p-e1REkLa02eyaATGhr_2G5rxj3KwNnY81-m9zOkjj46uhkJMg8pm9l2yFLYEk4tqn9mFy3vRKqVZhqi3TzkVLyFSMAApOEd9NaPkGrGxzqNMwsGz_3TTfb9s"
-                  />
-                </div>
-                <h4 className="text-2xl font-bold text-[#1F3F6E]">Sarah Chen</h4>
-                <p className="text-[#F58220] font-medium mb-4">Senior Tax Consultant</p>
-                <div className="flex gap-4">
-                  <span className="material-symbols-outlined text-slate-400 cursor-pointer hover:text-[#1F3F6E]">share</span>
-                </div>
+              <div className="p-8 bg-surface-container-low rounded-3xl space-y-4">
+                <Zap className="w-8 h-8 text-[#F58220]" />
+                <h3 className="text-xl font-bold text-[#1F3F6E]">Fast response</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Timely support for urgent filings, audit preparedness, and changing financial needs.
+                </p>
               </div>
-
-              {/* Team Member 3 */}
-              <div className="group">
-                <div className="relative overflow-hidden aspect-[4/5] bg-surface-container mb-6 rounded-lg">
-                  <img
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                    alt="Professional portrait of a male auditor in business casual attire with a bright office environment background"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrtTHLl2FFsfbAk-8Ul2PxlsTAdBw60wZ3xOX3teMMwaRzeo-VNIQtm7281U2CmJdphI5TMSr67rqg199m7vpgJq5AWLqwwT3OOTapIr1CXu6hyi5yBUAl1HfrSyfwz0WK7xofqQLiDnqqzLuO78Fn_NckkaPnZbcv9r5mlgtFugMu-70W3mAJ1oYrf4HoQtnim0J3FDVX2-J9x7IGbfTE-eOK7efe9dkrdMuZSApJZQI08vTA9yI2V8rXMvGv3ADX-6fy0o2f_g4"
-                  />
-                </div>
-                <h4 className="text-2xl font-bold text-[#1F3F6E]">Marcus Thorne</h4>
-                <p className="text-[#F58220] font-medium mb-4">Principal Auditor</p>
-                <div className="flex gap-4">
-                  <span className="material-symbols-outlined text-slate-400 cursor-pointer hover:text-[#1F3F6E]">share</span>
-                </div>
+              <div className="p-8 bg-surface-container-low rounded-3xl space-y-4">
+                <Building className="w-8 h-8 text-[#F58220]" />
+                <h3 className="text-xl font-bold text-[#1F3F6E]">Trusted stewardship</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  We protect client outcomes with discipline, accuracy, and a commitment to lasting relationships.
+                </p>
               </div>
+            </div>
+            <div className="mt-12 text-center lg:text-left">
+              <Link href="/contact" className="inline-flex items-center justify-center lg:justify-start bg-[#F58220] text-white px-10 py-4 rounded-lg font-bold hover:bg-[#d9731b] transition-colors">
+                Contact Us
+              </Link>
             </div>
           </div>
         </section>
@@ -184,9 +164,9 @@ export default function AboutPage() {
             <h2 className="text-white text-5xl md:text-6xl font-headline font-bold mb-8">
               Work with the experts<br />you can trust.
             </h2>
-            <button className="bg-[#F58220] text-white px-12 py-5 font-black text-lg rounded-lg hover:scale-105 active:scale-95 transition-all shadow-xl">
+            <Link href="/contact" className="inline-flex bg-[#F58220] text-white px-12 py-5 font-black text-lg rounded-lg hover:scale-105 active:scale-95 transition-all shadow-xl items-center justify-center">
               Contact Us
-            </button>
+            </Link>
           </div>
           {/* Decorative growth arrow background */}
           <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none">

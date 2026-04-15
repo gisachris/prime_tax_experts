@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Prime Tax Experts | Trusted Tax Advisory",
   description:
     "Prime Tax Experts delivers professional tax planning, accounting, and compliance services for businesses and individuals.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

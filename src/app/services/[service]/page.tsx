@@ -1,6 +1,8 @@
 "use client";
 
 import { use } from "react";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -117,6 +119,43 @@ const serviceDetails = {
       clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCVI7YTRwXaICkwZihP5hK4moguK4MDeVDhlxHwpMlmnue78aBdNrW0O1urtzpZjmDwluhk08hYlERu2fwnfWavp_Yw4uKShtt2jFyNNHgXQZtA_XLwF5VEQyAyR9nKLhDXem7fWNzS0FCV2LjN-ErpExwq4LE092thGlZYGI-HGBw3Yhoh-WsVD1E-UdEHcMcZubmqSrryDxS-LjZ2aw3Bz2sPnuz6cvLLx1d49mw9fvxwfGZ57oxvEM-MYDZl4A9Y_bcM9OZe02I'
     }
   },
+  'immigration-documents': {
+    title: 'Immigration Documents',
+    subtitle: 'Complete support for immigration applications, visas, and essential documentation preparation.',
+    heroImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD9Q4U7sZp0KqLpkJXdb9kQv4cZ0VTBxRr7R3JRE0tS6QK2ZTl1CV0qfXkfmR8zLqE4zSgT0tR1dxLJzFn5lVjiFId7iSOD8E26dGq0D8M1nOVoHqXQJ8E-Wymh7yYni1D5WsF2PJsGNR3e3zBhB6z0HOD6hREZBnzQ4BiKLxycM7P6oo2LG7Yk7S8aGJHeKnQXpYyPHJVGZwKf7mN__pQYM2A7p1pZQfgcOQ62JtXfNVG7E5dXxHdQWHL9BJGbDjD5y4ZDRZ9A0H4VfN6UGfpYncd8Qh7hWmO0SXBSC9T1lJicdtU',
+    overview: {
+      paragraph1: 'Immigration document preparation is critical for timely approvals and reduced risk of application delays. We help you gather, complete, and organize visa, residency, and supporting documents with expert attention to detail.',
+      paragraph2: 'Our team works with individuals, families, and business immigration cases to ensure every form is correctly completed and all required evidence is submitted in a way that reflects the strongest possible case.',
+      processTitle: 'The Process',
+      processDesc: 'We review your immigration goals, collect all required documents, and prepare a polished submission package tailored to your case.',
+      benefitTitle: 'The Benefit',
+      benefitDesc: 'Avoid application setbacks and present your case clearly with documentation prepared by experienced specialists.'
+    },
+    pillars: [
+      {
+        icon: 'description',
+        title: 'Document Accuracy',
+        description: 'Every immigration form is reviewed and completed with the highest attention to detail.'
+      },
+      {
+        icon: 'language',
+        title: 'Application Guidance',
+        description: 'Clear direction for visa categories, supporting evidence, and procedural requirements.'
+      },
+      {
+        icon: 'insights',
+        title: 'Approval Confidence',
+        description: 'Professional preparation that improves the clarity and completeness of every application.'
+      }
+    ],
+    successStory: {
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD2A6Idwcvjwd-Nuil2RAIt1gUvyIy4yGW2-nujEMV21Z2sm7lxp9gGtI_PbcqafNtFlziTjk2bbh6ZduKbJei5FQUeLQQxXBaixd0HPVuRnvHVBDQ_H8R2kt-DuKy5sClHM5JM2ZktE0QLLqjlZYYMZ_d3gyJORdiEWfDqXSgXNy9BZ3xXAQGrFO5XOqksf_BNKI_Sz8dO5i4hhKfOrJl8NIrpMI98T299BJFbnbPl83HRkoY7S0TN8yYNZix5zeWuMMX43Gcunwc',
+      quote: '"Prime Tax Experts made our immigration filing effortless and gave us the confidence to move forward quickly."',
+      clientName: 'Ana Morales',
+      clientTitle: 'New Resident Applicant',
+      clientImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCVI7YTRwXaICkwZihP5hK4moguK4MDeVDhlxHwpMlmnue78aBdNrW0O1urtzpZjmDwluhk08hYlERu2fwnfWavp_Yw4uKShtt2jFyNNHgXQZtA_XLwF5VEQyAyR9nKLhDXem7fWNzS0FCV2LjN-ErpExwq4LE092thGlZYGI-HGBw3Yhoh-WsVD1E-UdEHcMcZubmqSrryDxS-LjZ2aw3Bz2sPnuz6cvLLx1d49mw9fvxwfGZ57oxvEM-MYDZl4A9Y_bcM9OZe02I'
+    }
+  },
   'estate-planning': {
     title: 'Estate & Trust Planning',
     subtitle: 'Comprehensive estate planning services to protect and transfer your wealth to future generations.',
@@ -192,9 +231,9 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ servic
           <div className="relative z-10 max-w-7xl mx-auto px-8 w-full py-20">
             <nav className="flex items-center gap-2 mb-6 text-xs uppercase tracking-widest text-slate-300 font-label">
               <a className="hover:text-white transition-colors" href="/">Home</a>
-              <span className="material-symbols-outlined text-[10px]">chevron_right</span>
+              <ChevronRight className="w-4 h-4 text-white" />
               <a className="hover:text-white transition-colors" href="/services">Services</a>
-              <span className="material-symbols-outlined text-[10px]">chevron_right</span>
+              <ChevronRight className="w-4 h-4 text-white" />
               <span className="text-white font-bold">{serviceData.title}</span>
             </nav>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -297,10 +336,10 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ servic
                 <p className="text-sm text-on-surface-variant mb-6 leading-relaxed">
                   Speak with a specialist who understands the unique fiscal challenges of your industry. Our initial consultation is a strategic deep-dive into your needs.
                 </p>
-                <button className="w-full bg-[#F58220] text-white py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all">
+                <Link href="/contact" className="w-full bg-[#F58220] text-white py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-2 hover:brightness-110 transition-all">
                   <span className="material-symbols-outlined text-xl">call</span>
                   Call Now
-                </button>
+                </Link>
                 <p className="text-[10px] text-center mt-4 text-outline uppercase tracking-widest font-label">No commitment required</p>
               </div>
 

@@ -1,6 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { ArrowRight, BadgeCheck, User, Building2, Scale, TrendingUp, CheckCircle, Play } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, BadgeCheck, User, Building2, Scale, TrendingUp, FileText, CheckCircle, Play } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
 
 export default function Home() {
@@ -16,19 +17,19 @@ export default function Home() {
               Precision • Trust • Growth
             </div>
             <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-[#1F3F6E] leading-[1.1] tracking-tighter">
-              Expert Tax Solutions for Your Financial Success
+              Prime Tax Experts for Your Financial Success
             </h1>
             <p className="text-lg text-on-surface-variant max-w-xl leading-relaxed">
-              Helping businesses and individuals navigate complex tax laws with precision and care. Experience the clarity of high-end financial management.
+              Helping businesses and individuals solve tax problems and file taxes with precision and care. Experience the clarity of high-end financial management.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <button className="bg-[#F58220] text-white px-8 py-4 rounded-lg font-bold text-base hover:bg-[#d9731b] transition-all flex items-center gap-2">
+              <Link href="/contact" className="bg-[#F58220] text-white px-8 py-4 rounded-lg font-bold text-base hover:bg-[#d9731b] transition-all flex items-center gap-2">
                 Get Started
                 <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="border-2 border-[#1F3F6E] text-[#1F3F6E] px-8 py-4 rounded-lg font-bold text-base hover:bg-surface-container-low transition-all">
+              </Link>
+              <Link href="/services" className="border-2 border-[#1F3F6E] text-[#1F3F6E] px-8 py-4 rounded-lg font-bold text-base hover:bg-surface-container-low transition-all">
                 View Services
-              </button>
+              </Link>
             </div>
           </div>
           <div className="col-span-12 lg:col-span-6 relative mt-12 lg:mt-0">
@@ -90,14 +91,14 @@ export default function Home() {
               <h3 className="text-4xl font-headline font-bold text-[#1F3F6E] tracking-tight max-w-xl leading-none">
                 Tailored Tax Strategies for Diverse Financial Landscapes
               </h3>
-              <a className="text-[#1F3F6E] font-bold underline decoration-[#F58220] decoration-2 underline-offset-8 hover:text-[#F58220] transition-colors" href="#services">
+              <Link href="/services" className="text-[#1F3F6E] font-bold underline decoration-[#F58220] decoration-2 underline-offset-8 hover:text-[#F58220] transition-colors">
                 Explore All Services
-              </a>
+              </Link>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Service Card 1 */}
-            <div className="p-8 bg-surface-container-low rounded-lg group hover:bg-[#1F3F6E] transition-all duration-500 hover:-translate-y-2">
+            <Link href="/services/individual-tax" className="p-8 bg-surface-container-low rounded-lg group hover:bg-[#1F3F6E] transition-all duration-500 hover:-translate-y-2">
               <User className="w-12 h-12 text-[#F58220] mb-6 group-hover:text-white transition-colors" />
               <h4 className="text-xl font-bold text-[#1F3F6E] mb-4 group-hover:text-white transition-colors">
                 Individual Tax
@@ -105,9 +106,9 @@ export default function Home() {
               <p className="text-sm text-on-surface-variant leading-relaxed group-hover:text-slate-300 transition-colors">
                 Maximizing your returns while ensuring full compliance with ever-changing tax codes.
               </p>
-            </div>
+            </Link>
             {/* Service Card 2 */}
-            <div className="p-8 bg-surface-container-low rounded-lg group hover:bg-[#1F3F6E] transition-all duration-500 hover:-translate-y-2">
+            <Link href="/services/business-consulting" className="p-8 bg-surface-container-low rounded-lg group hover:bg-[#1F3F6E] transition-all duration-500 hover:-translate-y-2">
               <Building2 className="w-12 h-12 text-[#F58220] mb-6 group-hover:text-white transition-colors" />
               <h4 className="text-xl font-bold text-[#1F3F6E] mb-4 group-hover:text-white transition-colors">
                 Business Tax
@@ -115,19 +116,9 @@ export default function Home() {
               <p className="text-sm text-on-surface-variant leading-relaxed group-hover:text-slate-300 transition-colors">
                 Scalable tax solutions designed to support the growth and sustainability of your enterprise.
               </p>
-            </div>
-            {/* Service Card 3 */}
-            <div className="p-8 bg-surface-container-low rounded-lg group hover:bg-[#1F3F6E] transition-all duration-500 hover:-translate-y-2">
-              <Scale className="w-12 h-12 text-[#F58220] mb-6 group-hover:text-white transition-colors" />
-              <h4 className="text-xl font-bold text-[#1F3F6E] mb-4 group-hover:text-white transition-colors">
-                Corporate Audit
-              </h4>
-              <p className="text-sm text-on-surface-variant leading-relaxed group-hover:text-slate-300 transition-colors">
-                Rigorous auditing processes to maintain transparency and institutional integrity.
-              </p>
-            </div>
+            </Link>
             {/* Service Card 4 */}
-            <div className="p-8 bg-surface-container-low rounded-lg group hover:bg-[#1F3F6E] transition-all duration-500 hover:-translate-y-2">
+            <Link href="/services" className="p-8 bg-surface-container-low rounded-lg group hover:bg-[#1F3F6E] transition-all duration-500 hover:-translate-y-2">
               <TrendingUp className="w-12 h-12 text-[#F58220] mb-6 group-hover:text-white transition-colors" />
               <h4 className="text-xl font-bold text-[#1F3F6E] mb-4 group-hover:text-white transition-colors">
                 Financial Planning
@@ -135,7 +126,17 @@ export default function Home() {
               <p className="text-sm text-on-surface-variant leading-relaxed group-hover:text-slate-300 transition-colors">
                 Long-term strategies to preserve wealth and secure your financial future.
               </p>
-            </div>
+            </Link>
+            {/* Service Card 5 */}
+            <Link href="/services/immigration-documents" className="p-8 bg-surface-container-low rounded-lg group hover:bg-[#1F3F6E] transition-all duration-500 hover:-translate-y-2">
+              <FileText className="w-12 h-12 text-[#F58220] mb-6 group-hover:text-white transition-colors" />
+              <h4 className="text-xl font-bold text-[#1F3F6E] mb-4 group-hover:text-white transition-colors">
+                Immigration Documents
+              </h4>
+              <p className="text-sm text-on-surface-variant leading-relaxed group-hover:text-slate-300 transition-colors">
+                Expert help with immigration paperwork, filing, and document preparation for individuals and families.
+              </p>
+            </Link>
           </div>
         </div>
       </section>
@@ -144,15 +145,19 @@ export default function Home() {
       <section className="py-24 px-8 bg-surface">
         <div className="max-w-7xl mx-auto editorial-grid items-center">
           <div className="col-span-12 lg:col-span-6 relative">
-            <div className="bg-[#1F3F6E] rounded-2xl overflow-hidden aspect-video">
-              <img
-                alt="Financial analysis"
-                className="w-full h-full object-cover opacity-60 mix-blend-overlay"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMctJOuEfnnKzjpjjFTMawdTovwlOUh0WbJEqkKzIZSJJA5sioKMvQgOMLY389NTpAQ05x4sRa3kasxvJ4qZ5wa8LcXK9kG0WODMTYPQOsfKrQAQen41fvmm5u_NjMS2dy0f9fhQLRSNlgDMe-yt3h-nA96eYHuzSIelqhUzCQ0vcIAaeXAXJYybk97Zcpee3k3LU0FEQhFAGbWuAB6Zn-3qjbzzHEoqmto8G0f7GG6LMJx4oDRwFQ1fO9TIZCpqqMFf1YEZvRgAc"
-              />
+            <div className="bg-[#1F3F6E] rounded-2xl overflow-hidden aspect-video relative group">
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+              >
+                <source src="/intro_video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-20 h-20 bg-[#F58220] rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="w-20 h-20 bg-[#F58220] rounded-full flex items-center justify-center hover:scale-110 transition-transform">
                 <Play className="w-8 h-8 text-white fill-current" />
               </div>
             </div>
@@ -203,82 +208,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-24 px-8 bg-surface-container-low">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-center text-4xl font-headline font-bold text-[#1F3F6E] mb-16">
-            The Voices of Our Partners
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Testimonial 1 */}
-            <div className="bg-surface-container-lowest p-10 rounded-xl shadow-[0px_20px_40px_rgba(31,63,110,0.06)] relative">
-              <span className="material-symbols-outlined absolute top-6 right-8 text-6xl text-[#1F3F6E]/5">
-                format_quote
-              </span>
-              <p className="text-on-surface-variant italic leading-relaxed mb-8 relative z-10">
-                "Prime Tax Experts transformed our corporate structure. Their architectural approach to taxes saved us 20% in annual liabilities."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
-                  <img
-                    alt="Client 1"
-                    className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtmxegAVk1lYm8nELvxTUxbTivG6cIlTfNZYwBOMgpyNMQ2DqPC9afwFlYIPEDpsINh_YYPFlO5AEQSItMs4XfoGJGIlJSEMULFG5uZjVG3U08v83LXZLSRLOQn7l_G0Z2E8DziSEhYWSRNL1UHtfR05yJvUkx1IJFS0nj4pTR4v4LrW57iGHEcpBQpDsBDSMy6f_GxZBVx8D0r2V4YeJQuVJEsfW3F8MLvXFzd0KLp-JmRHsUEM6blBmCSPRJlpm2mrx0MDeyAzM"
-                  />
-                </div>
-                <div>
-                  <div className="font-bold text-[#1F3F6E]">Marcus Thorne</div>
-                  <div className="text-xs uppercase tracking-wider text-secondary">CEO, Thorne Logistics</div>
-                </div>
-              </div>
-            </div>
-            {/* Testimonial 2 */}
-            <div className="bg-surface-container-lowest p-10 rounded-xl shadow-[0px_20px_40px_rgba(31,63,110,0.06)] relative md:mt-8 lg:mt-0">
-              <span className="material-symbols-outlined absolute top-6 right-8 text-6xl text-[#1F3F6E]/5">
-                format_quote
-              </span>
-              <p className="text-on-surface-variant italic leading-relaxed mb-8 relative z-10">
-                "As a private investor, I value precision above all. Their attention to detail and proactive strategy is unmatched in the industry."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
-                  <img
-                    alt="Client 2"
-                    className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpF-xqsJC4zVJrv5A1z3DsHB_skKQhjdZ3ACHd0y0q4J_kPS9djE-04-rP9teLRE5fm-2omL_3exbuk-zQS-Apuph-mUf5O9snoSwAm0s2E-MLnFF70OKFhYfspYELAM6bTcDHtsIrJpWV-3lhwLkr0-D4tbo7okjIRvjz1RKzUch6N1Di3_9zbEgrwzAx7e7rjVC1vs3FN2rBzye-8Yu1EVrBcnpzMybs0e9TMFyb679Lp9NLotElXaPI24HWkAw_PqsQzFchX8A"
-                  />
-                </div>
-                <div>
-                  <div className="font-bold text-[#1F3F6E]">Sarah Jenkins</div>
-                  <div className="text-xs uppercase tracking-wider text-secondary">Private Equity Consultant</div>
-                </div>
-              </div>
-            </div>
-            {/* Testimonial 3 */}
-            <div className="bg-surface-container-lowest p-10 rounded-xl shadow-[0px_20px_40px_rgba(31,63,110,0.06)] relative lg:mt-8 md:hidden lg:block">
-              <span className="material-symbols-outlined absolute top-6 right-8 text-6xl text-[#1F3F6E]/5">
-                format_quote
-              </span>
-              <p className="text-on-surface-variant italic leading-relaxed mb-8 relative z-10">
-                "The peace of mind they provide is priceless. Tax season is no longer a stressor but an opportunity for optimization."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
-                  <img
-                    alt="Client 3"
-                    className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD12rKlGQ7uRg4v7BQXsuXIiCU1n3k0qwUIHfRJ_2rh7QypCUWTUUfwBLpDXqHUsvXQRGgdcJdamSpzTnY0bNLQ6gZSQ2AUFFl-r_Ha7OeY94Oz9Gc9btnDaN063ue9kleeobmmyjwaz5che0x_ckqcBMH6NR56hYYnCEq6Y5kk82Hm3AG-JpcwIkCdZkCnHSV3lbK2u9a_IVsUWPTGAkGkXoDIjE44CSMxvIb_ayVsByua6w4xqVTONXRSsTQSF7KF69KQObz0ps8"
-                  />
-                </div>
-                <div>
-                  <div className="font-bold text-[#1F3F6E]">David Chen</div>
-                  <div className="text-xs uppercase tracking-wider text-secondary">Director, Chen Innovations</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA Banner */}
       <section className="py-20 px-8">
@@ -292,9 +222,9 @@ export default function Home() {
             <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
               Schedule a free consultation with our experts today and discover how we can elevate your financial strategy.
             </p>
-            <button className="bg-[#F58220] text-white px-10 py-4 rounded-lg font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-lg shadow-[#F58220]/20">
+            <Link href="/contact" className="bg-[#F58220] text-white px-10 py-4 rounded-lg font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-lg shadow-[#F58220]/20 inline-flex items-center justify-center">
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </section>

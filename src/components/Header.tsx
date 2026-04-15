@@ -33,12 +33,12 @@ export function Header() {
           )}
         </button>
 
-        {/* Mobile Logo - Clickable to Contact */}
-        <Link href="/contact" className="flex items-center gap-2">
+        {/* Mobile Logo - Clickable to Home */}
+        <Link href="/" className="flex items-center gap-2">
           <img
             alt="Prime Tax Experts Logo"
             className="h-8 w-auto"
-            src="https://lh3.googleusercontent.com/aida/ADBb0ujQ6PKbpbb0Alot11BJU958XY_o7Zdr7rTVLYW_EyLcmlggY5u3-bRXbsssAywxP_Nsj8VHuSzt2u9KXWmKdT-4gkPvK3bdROAcJF0CkF7hnxp_jHtisY9io2_GB57nHT7DJbLOL9NVbKcI1adgQ2ENqc7J-yAK8iOd8vOkfnGf4Rk6dsij194WXU2Kj3EkIBg1aszSQqReQDYShXvOtMIt9woeMkZFyO5fPDLCkfUa4FZ-1wUvfyAuporNHulHjc-W3FR5ABIxEQ"
+            src="/logo.png"
           />
         </Link>
       </div>
@@ -50,7 +50,7 @@ export function Header() {
           <img
             alt="Prime Tax Experts Logo"
             className="h-8 w-auto"
-            src="https://lh3.googleusercontent.com/aida/ADBb0ujQ6PKbpbb0Alot11BJU958XY_o7Zdr7rTVLYW_EyLcmlggY5u3-bRXbsssAywxP_Nsj8VHuSzt2u9KXWmKdT-4gkPvK3bdROAcJF0CkF7hnxp_jHtisY9io2_GB57nHT7DJbLOL9NVbKcI1adgQ2ENqc7J-yAK8iOd8vOkfnGf4Rk6dsij194WXU2Kj3EkIBg1aszSQqReQDYShXvOtMIt9woeMkZFyO5fPDLCkfUa4FZ-1wUvfyAuporNHulHjc-W3FR5ABIxEQ"
+            src="/logo.png"
           />
           <span className="hidden lg:block text-xl font-bold text-[#1F3F6E] tracking-tighter font-headline">
             {siteConfig.name}
@@ -102,10 +102,10 @@ export function Header() {
         </div>
 
         {/* Call Now Button */}
-        <button className="bg-[#F58220] text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-tight scale-95 active:opacity-80 transition-all hover:bg-[#d9731b] inline-flex items-center gap-2">
+        <Link href="/contact" className="bg-[#F58220] text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-tight scale-95 active:opacity-80 transition-all hover:bg-[#d9731b] inline-flex items-center gap-2">
           <Phone className="w-4 h-4" />
           Call Now
-        </button>
+        </Link>
       </div>
 
       {/* Mobile Menu */}
