@@ -69,15 +69,15 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
               <div className="space-y-2">
-                <div className="text-5xl font-black text-[#1F3F6E]">15+</div>
+                <div className="text-5xl font-black text-[#1F3F6E]">3+</div>
                 <div className="text-sm font-label uppercase tracking-widest text-slate-500">Years Excellence</div>
               </div>
               <div className="space-y-2">
-                <div className="text-5xl font-black text-[#F58220]">$2B+</div>
+                <div className="text-5xl font-black text-[#F58220]">$10M+</div>
                 <div className="text-sm font-label uppercase tracking-widest text-slate-500">Managed Assets</div>
               </div>
               <div className="space-y-2">
-                <div className="text-5xl font-black text-[#1F3F6E]">500+</div>
+                <div className="text-5xl font-black text-[#1F3F6E]">90+</div>
                 <div className="text-sm font-label uppercase tracking-widest text-slate-500">Corporate Clients</div>
               </div>
               <div className="space-y-2">

@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="bg-[#1F3F6E] text-white w-full border-t border-white/10">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 py-12 max-w-7xl mx-auto">
         <div className="space-y-6">
-          <div className="text-lg font-black text-white tracking-tighter">{siteConfig.name}</div>
+          <div className="text-lg font-black text-white tracking-tighter">Prime Tax&nbsp; Experts</div>
           <p className="font-['Inter'] text-sm leading-relaxed text-slate-300">
             {siteConfig.description}
           </p>
@@ -29,6 +29,7 @@ export function Footer() {
             <li><a className="text-slate-300 hover:text-white hover:translate-x-1 transition-transform inline-block" href="/services/business-consulting">Corporate Planning</a></li>
             <li><a className="text-slate-300 hover:text-white hover:translate-x-1 transition-transform inline-block" href="/services/estate-planning">Estate Planning</a></li>
             <li><a className="text-slate-300 hover:text-white hover:translate-x-1 transition-transform inline-block" href="/services/corporate-tax">Audit Support</a></li>
+            <li><a className="text-slate-300 hover:text-white hover:translate-x-1 transition-transform inline-block" href="/services/immigration-documents">Immigration Documents</a></li>
           </ul>
         </div>
         <div className="space-y-6">

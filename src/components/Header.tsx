@@ -53,7 +53,7 @@ export function Header() {
             src="/logo.png"
           />
           <span className="hidden lg:block text-xl font-bold text-[#1F3F6E] tracking-tighter font-headline">
-            {siteConfig.name}
+            Prime Tax &nbsp;Experts
           </span>
         </Link>
 

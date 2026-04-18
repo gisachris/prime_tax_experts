@@ -36,7 +36,7 @@ export default function ServicesPage() {
                 <span className="inline-block text-[#F58220] font-bold tracking-[0.2em] uppercase mb-4 font-label">Expertise & Precision</span>
                 <h1 className="text-5xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1] mb-6 font-headline">Our Services</h1>
                 <p className="text-lg lg:text-xl text-slate-200 max-w-2xl leading-relaxed">
-                  Comprehensive tax and financial solutions tailored to your needs. We blend institutional authority with modern strategic agility to protect your wealth.
+                  Comprehensive tax, financial solutions, and Immigration Services tailored to your needs. We blend institutional authority with modern strategic agility to protect your wealth.
                 </p>
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function ServicesPage() {
                   Enterprise-level compliance and multi-jurisdictional tax planning. Specialized solutions for large-scale operations and complex filings.
                 </p>
                 <a className="inline-flex items-center text-sm font-bold text-tertiary group-hover:text-[#F58220] transition-colors" href="/services/corporate-tax">
-                  Learn More
+                  Learnclear More
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
@@ -97,7 +97,7 @@ export default function ServicesPage() {
                 <div className="mb-8">
                   <FileText className="w-12 h-12 text-[#F58220]" />
                 </div>
-                <h3 className="text-xl font-bold text-tertiary mb-4 tracking-tight">Immigration Documents</h3>
+                <h3 className="text-xl font-bold text-tertiary mb-4 tracking-tight">U.S Immigration Documents</h3>
                 <p className="text-sm text-on-surface-variant leading-relaxed mb-8 flex-grow">
                   Professional assistance with immigration paperwork, visas, and supporting documentation to keep your applications moving forward.
                 </p>

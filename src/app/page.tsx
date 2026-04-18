@@ -17,10 +17,10 @@ export default function Home() {
               Precision • Trust • Growth
             </div>
             <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-[#1F3F6E] leading-[1.1] tracking-tighter">
-              Prime Tax Experts for Your Financial Success
+              Prime Tax Experts for Your Financial Success And All U.S Immigration Documents
             </h1>
             <p className="text-lg text-on-surface-variant max-w-xl leading-relaxed">
-              Helping businesses and individuals solve tax problems and file taxes with precision and care. Experience the clarity of high-end financial management.
+              Helping businesses and individuals to solve tax problems and file taxes with precision and care. Experience the clarity of high-end financial management.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Link href="/contact" className="bg-[#F58220] text-white px-8 py-4 rounded-lg font-bold text-base hover:bg-[#d9731b] transition-all flex items-center gap-2">
@@ -53,14 +53,14 @@ export default function Home() {
       <section className="bg-surface-container-low py-12 px-8">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-8 md:gap-4">
           <div className="flex items-center gap-4">
-            <span className="text-3xl font-bold text-[#1F3F6E]">15+</span>
+            <span className="text-3xl font-bold text-[#1F3F6E]">3+</span>
             <span className="text-sm font-semibold text-secondary leading-tight uppercase tracking-wider">
               Years of<br />Experience
             </span>
           </div>
           <div className="h-8 w-px bg-outline-variant hidden lg:block opacity-30"></div>
           <div className="flex items-center gap-4">
-            <span className="text-3xl font-bold text-[#1F3F6E]">500+</span>
+            <span className="text-3xl font-bold text-[#1F3F6E]">90+</span>
             <span className="text-sm font-semibold text-secondary leading-tight uppercase tracking-wider">
               Clients<br />Protected
             </span>
@@ -131,7 +131,7 @@ export default function Home() {
             <Link href="/services/immigration-documents" className="p-8 bg-surface-container-low rounded-lg group hover:bg-[#1F3F6E] transition-all duration-500 hover:-translate-y-2">
               <FileText className="w-12 h-12 text-[#F58220] mb-6 group-hover:text-white transition-colors" />
               <h4 className="text-xl font-bold text-[#1F3F6E] mb-4 group-hover:text-white transition-colors">
-                Immigration Documents
+                U.S Immigration Documents
               </h4>
               <p className="text-sm text-on-surface-variant leading-relaxed group-hover:text-slate-300 transition-colors">
                 Expert help with immigration paperwork, filing, and document preparation for individuals and families.
@@ -197,9 +197,18 @@ export default function Home() {
               <div className="flex items-start gap-4">
                 <CheckCircle className="w-5 h-5 text-[#F58220] mt-1 flex-shrink-0" />
                 <div>
-                  <h5 className="font-bold text-[#F58220]">Data-Driven Insights</h5>
+                  <h5 className="font-bold text-[#1F3F6E]">Data-Driven Insights</h5>
                   <p className="text-sm text-on-surface-variant leading-relaxed">
                     Utilizing cutting-edge fintech to identify unique saving opportunities.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-5 h-5 text-[#F58220] mt-1 flex-shrink-0" />
+                <div>
+                  <h5 className="font-bold text-[#F58220]">U.S Immigration Services</h5>
+                  <p className="text-sm text-on-surface-variant leading-relaxed">
+                    Complete support for immigration applications, visas, and essential documentation preparation.
                   </p>
                 </div>
               </div>

@@ -121,13 +121,13 @@ const serviceDetails = {
   },
   'immigration-documents': {
     title: 'Immigration Documents',
-    subtitle: 'Complete support for immigration applications, visas, and essential documentation preparation.',
+    subtitle: 'Complete support for U.S immigration applications, visas, and essential documentation preparation.',
     heroImage: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD9Q4U7sZp0KqLpkJXdb9kQv4cZ0VTBxRr7R3JRE0tS6QK2ZTl1CV0qfXkfmR8zLqE4zSgT0tR1dxLJzFn5lVjiFId7iSOD8E26dGq0D8M1nOVoHqXQJ8E-Wymh7yYni1D5WsF2PJsGNR3e3zBhB6z0HOD6hREZBnzQ4BiKLxycM7P6oo2LG7Yk7S8aGJHeKnQXpYyPHJVGZwKf7mN__pQYM2A7p1pZQfgcOQ62JtXfNVG7E5dXxHdQWHL9BJGbDjD5y4ZDRZ9A0H4VfN6UGfpYncd8Qh7hWmO0SXBSC9T1lJicdtU',
     overview: {
-      paragraph1: 'Immigration document preparation is critical for timely approvals and reduced risk of application delays. We help you gather, complete, and organize visa, residency, and supporting documents with expert attention to detail.',
+      paragraph1: 'U.S Immigration documents preparation is essential for timely approvals and minimizing risk of application delays. We assist you in gathering, completing, organizing, and guide you through applying for your visa(s), U.S Citizenship, residency, work permits, Travel documents, and supporting documents with expert attention to detail.',
       paragraph2: 'Our team works with individuals, families, and business immigration cases to ensure every form is correctly completed and all required evidence is submitted in a way that reflects the strongest possible case.',
       processTitle: 'The Process',
-      processDesc: 'We review your immigration goals, collect all required documents, and prepare a polished submission package tailored to your case.',
+      processDesc: 'We review your immigration status, collect all required documents, and prepare a polished submission package tailored to your case.',
       benefitTitle: 'The Benefit',
       benefitDesc: 'Avoid application setbacks and present your case clearly with documentation prepared by experienced specialists.'
     },

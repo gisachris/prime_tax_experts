@@ -26,7 +26,7 @@ export default function ContactPage() {
               <span className="text-[0.75rem] font-bold tracking-[0.1em] text-[#F58220] uppercase mb-4 block font-label">Connect with our team</span>
               <h1 className="text-5xl md:text-7xl font-bold font-headline text-white tracking-tight mb-6 drop-shadow-sm">Get in Touch</h1>
               <p className="text-lg md:text-xl text-slate-200 leading-relaxed max-w-2xl drop-shadow-sm">
-                We're here to answer your tax questions and provide the architectural precision your finances deserve. Reach out for a consultation.
+                We provide expert tax guidance with the precision your finances deserve, along with reliable support for U.S Immigration document preparation and applications. Reach out today to schedule your consultation.
               </p>
             </header>
           </div>
