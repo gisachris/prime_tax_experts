@@ -17,10 +17,10 @@ export default function Home() {
               Precision • Trust • Growth
             </div>
             <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-[#1F3F6E] leading-[1.1] tracking-tighter">
-              Prime Tax Experts for Your Financial Success And All U.S Immigration Documents
+              Prime Tax Experts for Your Financial Success, And All U.S. Immigration Documents
             </h1>
             <p className="text-lg text-on-surface-variant max-w-xl leading-relaxed">
-              Helping businesses and individuals to solve tax problems and file taxes with precision and care. Experience the clarity of high-end financial management.
+              Helping businesses and individuals to solve tax problems, file taxes and U.S. Immigration documentation with precision and care. Experience the clarity of high-end financial management.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Link href="/contact" className="bg-[#F58220] text-white px-8 py-4 rounded-lg font-bold text-base hover:bg-[#d9731b] transition-all flex items-center gap-2">
@@ -60,7 +60,7 @@ export default function Home() {
           </div>
           <div className="h-8 w-px bg-outline-variant hidden lg:block opacity-30"></div>
           <div className="flex items-center gap-4">
-            <span className="text-3xl font-bold text-[#1F3F6E]">90+</span>
+            <span className="text-3xl font-bold text-[#1F3F6E]">500+</span>
             <span className="text-sm font-semibold text-secondary leading-tight uppercase tracking-wider">
               Clients<br />Protected
             </span>
@@ -89,7 +89,7 @@ export default function Home() {
             <h2 className="text-xs font-bold text-[#F58220] uppercase tracking-[0.2em] mb-4">Our Expertise</h2>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <h3 className="text-4xl font-headline font-bold text-[#1F3F6E] tracking-tight max-w-xl leading-none">
-                Tailored Tax Strategies for Diverse Financial Landscapes
+                Tailored Tax Strategies & U.S. Immigration Documentation for Diverse Financial Landscapes
               </h3>
               <Link href="/services" className="text-[#1F3F6E] font-bold underline decoration-[#F58220] decoration-2 underline-offset-8 hover:text-[#F58220] transition-colors">
                 Explore All Services

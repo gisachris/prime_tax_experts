@@ -77,7 +77,7 @@ export default function AboutPage() {
                 <div className="text-sm font-label uppercase tracking-widest text-slate-500">Managed Assets</div>
               </div>
               <div className="space-y-2">
-                <div className="text-5xl font-black text-[#1F3F6E]">90+</div>
+                <div className="text-5xl font-black text-[#1F3F6E]">500+</div>
                 <div className="text-sm font-label uppercase tracking-widest text-slate-500">Corporate Clients</div>
               </div>
               <div className="space-y-2">
