@@ -3,9 +3,52 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { siteConfig } from "@/lib/siteConfig";
-import { MapPin, Phone, Mail, Clock, Share2, Globe, Link, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Share2, Globe, Link, ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
+import { useState } from "react";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: 'Tax Planning',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({ type: 'success', message: 'Thank you! Your message has been sent successfully.' });
+        setFormData({ name: '', email: '', phone: '', subject: 'Tax Planning', message: '' });
+      } else {
+        setSubmitStatus({ type: 'error', message: data.error || 'Failed to send message. Please try again.' });
+      }
+    } catch (error) {
+      setSubmitStatus({ type: 'error', message: 'Network error. Please check your connection and try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background text-on-background font-body">
       <Header />
@@ -121,22 +164,44 @@ export default function ContactPage() {
 
             {/* Contact Form Column */}
             <div className="lg:col-span-7 bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0px_20px_40px_rgba(31,63,110,0.06)]">
-              <form className="space-y-8">
+              {submitStatus.type && (
+                <div className={`mb-6 p-4 rounded-lg flex items-center gap-3 ${
+                  submitStatus.type === 'success' 
+                    ? 'bg-green-50 text-green-800 border border-green-200' 
+                    : 'bg-red-50 text-red-800 border border-red-200'
+                }`}>
+                  {submitStatus.type === 'success' ? (
+                    <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                  ) : (
+                    <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                  )}
+                  <p className="text-sm font-medium">{submitStatus.message}</p>
+                </div>
+              )}
+              <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="border-b border-outline-variant/15 py-2 focus-within:border-b-2 focus-within:border-[#1F3F6E] transition-colors">
                     <label className="text-[0.65rem] font-bold tracking-widest text-slate-400 uppercase block mb-1">Full Name</label>
                     <input
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
                       className="w-full bg-transparent border-none focus:ring-0 text-[#1F3F6E] font-medium placeholder:text-slate-300 p-0"
                       placeholder="John Doe"
                       type="text"
+                      required
                     />
                   </div>
                   <div className="border-b border-outline-variant/15 py-2 focus-within:border-b-2 focus-within:border-[#1F3F6E] transition-colors">
                     <label className="text-[0.65rem] font-bold tracking-widest text-slate-400 uppercase block mb-1">Email Address</label>
                     <input
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       className="w-full bg-transparent border-none focus:ring-0 text-[#1F3F6E] font-medium placeholder:text-slate-300 p-0"
                       placeholder="john@example.com"
                       type="email"
+                      required
                     />
                   </div>
                 </div>
@@ -144,6 +209,9 @@ export default function ContactPage() {
                   <div className="border-b border-outline-variant/15 py-2 focus-within:border-b-2 focus-within:border-[#1F3F6E] transition-colors">
                     <label className="text-[0.65rem] font-bold tracking-widest text-slate-400 uppercase block mb-1">Phone Number</label>
                     <input
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
                       className="w-full bg-transparent border-none focus:ring-0 text-[#1F3F6E] font-medium placeholder:text-slate-300 p-0"
                       placeholder="+61 000 000 000"
                       type="tel"
@@ -151,8 +219,14 @@ export default function ContactPage() {
                   </div>
                   <div className="border-b border-outline-variant/15 py-2 focus-within:border-b-2 focus-within:border-[#1F3F6E] transition-colors">
                     <label className="text-[0.65rem] font-bold tracking-widest text-slate-400 uppercase block mb-1">Subject</label>
-                    <select className="w-full bg-transparent border-none focus:ring-0 text-[#1F3F6E] font-medium p-0 appearance-none">
+                    <select 
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      className="w-full bg-transparent border-none focus:ring-0 text-[#1F3F6E] font-medium p-0 appearance-none"
+                    >
                       <option>Tax Planning</option>
+                      <option>U.S. Migration Documentation</option>
                       <option>Business Advisory</option>
                       <option>SMSF Services</option>
                       <option>General Inquiry</option>
@@ -162,17 +236,22 @@ export default function ContactPage() {
                 <div className="border-b border-outline-variant/15 py-2 focus-within:border-b-2 focus-within:border-[#1F3F6E] transition-colors">
                   <label className="text-[0.65rem] font-bold tracking-widest text-slate-400 uppercase block mb-1">Your Message</label>
                   <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     className="w-full bg-transparent border-none focus:ring-0 text-[#1F3F6E] font-medium placeholder:text-slate-300 p-0 resize-none"
                     placeholder="How can our experts help you today?"
                     rows={4}
+                    required
                   ></textarea>
                 </div>
                 <div className="pt-4">
                   <button
-                    className="w-full md:w-auto bg-[#F58220] text-white px-10 py-4 rounded-lg font-bold tracking-tight hover:brightness-110 active:scale-[0.98] transition-all inline-flex items-center justify-center gap-3"
                     type="submit"
+                    disabled={isSubmitting}
+                    className="w-full md:w-auto bg-[#F58220] text-white px-10 py-4 rounded-lg font-bold tracking-tight hover:brightness-110 active:scale-[0.98] transition-all inline-flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <p className="mt-6 text-[0.75rem] text-slate-400 leading-relaxed italic">
